@@ -1,7 +1,11 @@
 def take_input():
-    command = input("\n>")
+    command = input(">")
     return command
 
 
 def installer():
+    print("d")
+
+
+def current_temp():
 
