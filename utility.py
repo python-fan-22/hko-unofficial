@@ -33,10 +33,6 @@ def take_input():
     return command
 
 
-def installer():
-    print("d")
-
-
 def current_temp(district):
     url = "https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=en"
     if district in districts:
@@ -55,7 +51,7 @@ def current_temp(district):
 
 
 def download(file_name):
-    url = r"https://raw.githubusercontent.com/python-fan-22/api-caller/main/" + file_name
+    url = r"https://raw.githubusercontent.com/python-fan-22/hko-unofficial/main/" + file_name
     response = requests.get(url)
     if response.status_code == 200:
         content = response.content.decode("utf-8")
