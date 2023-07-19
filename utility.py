@@ -54,4 +54,9 @@ def current_temp(district):
         print('error: district not found :(. try, "district-list" for a list of all valid districts')
 
 
-
+def download(file_name):
+    url = r"https://raw.githubusercontent.com/python-fan-22/api-caller/main/" + file_name
+    response = requests.get(url)
+    if response.status_code == 200:
+        content = response.content.decode("utf-8")
+        return content
